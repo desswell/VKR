@@ -60,9 +60,6 @@ export function MainPage() {
         setIsSqlRequestLevel(prevState => !prevState)
     }
 
-    const [plotData, setPlotData] = useState(null);
-
-
 
     const handleClick = async () => {
         setLoader(true)
@@ -143,14 +140,6 @@ export function MainPage() {
                         <TextArea children='SQL запрос для уровней' value={sqlRequestLevel}
                                   onChange={(event) => setSqlRequestLevel(event.target.value)}/>
                     </div>}
-                    <div className="input-div">
-                        <StyledInput children='Признаки' value={sigh}
-                                     onChange={(event) => setSigh(event.target.value)}/>
-                    </div>
-                    <div className="input-div">
-                        <StyledInput children='Целевые признаки' value={sighParam}
-                                     onChange={(event) => setSighParam(event.target.value)}/>
-                    </div>
                     <div className="input-div">
                         <Select children={[
                             {value: 'auto_interval', label: '1. Автоматический'},
